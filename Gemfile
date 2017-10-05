@@ -55,4 +55,5 @@ gem 'administrate', '~> 0.8.1'
 gem 'stripe', '~> 3.3', '>= 3.3.2'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1', :groups => [:development, :test]
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'materialize-sass', '~> 0.100.2'
+gem 'material_icons', '~> 2.2', '>= 2.2.1'

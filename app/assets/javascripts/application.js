@@ -13,7 +13,28 @@
 //= require rails-ujs
 //= require jquery3
 //= require jquery_ujs
-//= require popper
-//= require bootstrap-sprockets
 //= require turbolinks
+//= require materialize-sprockets
+//= require materialize/extras/nouislider
 //= require_tree .
+
+
+$(document).ready(function(){
+  // Init Carousel
+  $('.carousel').carousel();
+
+  // Init Carousel Slider
+  $('.carousel.carousel-slider').carousel({fullWidth:true});
+
+  // Fire off toast
+  //Materialize.toast('Hello World', 3000);
+
+  // Init Slider
+  $('.slider').slider();
+
+  // Init Modal
+  $('.modal').modal();
+
+  // Init Sidenav
+  $('.button-collapse').sideNav();
+});
