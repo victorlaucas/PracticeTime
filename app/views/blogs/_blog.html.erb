@@ -1,0 +1,13 @@
+<% @blogs.each do |blog| %>
+  <tr>
+    <td><%= blog.title %></td>
+    <td><%= blog.date %></td>
+    <td><%= blog.body %></td>
+    <td class="btn teal lighten-4"><%= link_to 'Show', blog %></td>
+    <% if current_user.id == blog.user_id || logged_in?(:admin) %>
+      <td class="btn teal lighten-4"><%= link_to 'Edit', edit_blog_path(blog) %></td>
+      <td class="btn teal lighten-4"><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% else %>
+    <% end %>
+  </tr>
+<% end %>
