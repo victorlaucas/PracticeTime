@@ -11,22 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :blog_title %>
-  </div>
+<div class="row">
+  <form class="col s12">
+   <div class="validate">
+      <%= form.label :title %>
+      <%= form.text_field :title, id: :blog_title, class: 'validate' %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :date %> 
-    <%= form.date_field :date %>  
-  </div>
+    <div class="form-group">
+      <%= form.label :date %> 
+      <%= form.date_field :date, class: 'datepicker' %>  
+    </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :blog_body %>
-  </div>
+    <div class="validate">
+      <%= form.label :body %>
+      <%= form.text_area :body, id: :blog_body, class: 'validate' %>
+    </div>
 
-  <div class="actions"><!-- class="" figure out how to add--> 
-    <%= form.submit %>
-  </div>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  </form>
+</div>
 <% end %>
+<script type="text/javascript">
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 100, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: true // Close upon selecting a date,
+  });
+</script>
