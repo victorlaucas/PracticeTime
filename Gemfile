@@ -57,3 +57,4 @@ gem 'dotenv-rails', '~> 2.2', '>= 2.2.1', :groups => [:development, :test]
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'materialize-sass', '~> 0.100.2'
 gem 'material_icons', '~> 2.2', '>= 2.2.1'
+gem 'kaminari', :git => 'https://github.com/kaminari/kaminari.git'

@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
     before_action :authenticate_user!
     # access all: [:show, :index], if current_user.id == blog.user_id [:destroy, :new, :create, :update, :edit, :show]}, admin: :all
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(10)
   end
 
   def show
